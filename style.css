@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;800&display=swap');
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main {
+  height: fit-content;
+  width: 100%;
+}
+
+@keyframes blur-img {
+  from {
+    width: 80%;
+    opacity: 0;
+    max-width: 900px;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+  } to {
+    width: 35%;
+    opacity: 1;
+    max-width: 300px;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes blur-txt {
+  from {
+    opacity: 0;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    font-size: 10px;
+  } to {
+    opacity: 1;
+    -webkit-filter: blur(50px);
+    filter: blur(0);
+    font-size: 2.3em;
+  }
+}
+
+@keyframes fade-txt {
+  from {
+    opacity: 0;
+
+  } to {
+    opacity: 1;
+  }
+}
+
+.animated-logo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  opacity: 0;
+  animation-name: blur-img;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  text-transform: lowercase;
+  position: absolute;
+  color: rgb(200,200,200);
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  opacity: 0;
+  animation-name: blur-txt;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  font-size: 10px;
+  user-select: none;
+}
+
+.blue {
+  color: #30d7c0;
+}
+
+.yellow {
+  color: #ffb706;
+}
+
+.red {
+  color: #db4444;
+}
+
+h2 {
+  text-transform: lowercase;
+  position: absolute;
+  color: rgb(215,215,215);
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3em;
+  opacity: 0;
+  animation-name: fade-txt;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  user-select: none;
+}
+
+.actions a {
+  padding: 5px 11px;
+  background-color: transparent;
+  font-weight: 800;
+  font-size: 1.4em;
+  text-decoration: none;
+  transition: 1s;
+  margin: 7px;
+  box-shadow: rgba(0,0,0,0.2) 2px 2px 7px;
+}
+
+.actions a:hover {
+  transition: 0.3s;
+  box-shadow: rgba(0,0,0,0.3) 2px 2px 14px;
+}
+
+@keyframes float-up {
+  from {
+    bottom: -30%;
+  } to {
+    bottom: 20%;
+  }
+}
+
+.actions {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: float-up;
+  animation-delay: 2.7s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#modalBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+}
+
+#modal {
+  height: fit-content;
+  width: 85vw;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0,0,0,0.3) 2px 2px 14px;
+  border-radius: 3px;
+  transition: 1s;
+}
+
+.unmoved {
+  top: -70%;
+  transition: 1s;
+}
+
+.moved {
+  top: 50%;
+  transition: 1s;
+}
+
+h3 {
+  font-size: 2.3em;
+}
+
+p {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 37px;
+}
+
+#modal a {
+  color: black;
+}
+
+iframe {
+  width: 100%;
+  border-style: none;
+  padding-top: 75%;
+}
